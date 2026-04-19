@@ -1,22 +1,22 @@
 class Product {
-  final int id;
+  final String id;
   final String title;
-  final double price;
+  final String price;
   final String description;
 
   Product({
-    required this.id,
-    required this.title,
-    required this.price,
-    required this.description,
+    required this.id, 
+    required this.title, 
+    required this.price, 
+    required this.description
   });
 
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
-      id: int.tryParse(json['id'].toString()) ?? 0,
-      title: json['name'] ?? json['title'] ?? 'Không có tên',
-      price: double.tryParse(json['price'].toString()) ?? 0.0,
-      description: json['description'] ?? 'Không có mô tả',
+      id: json['id'] ?? '',
+      title: json['title'] ?? '',
+      price: json['price'] ?? '',
+      description: json['description'] ?? '',
     );
   }
 }

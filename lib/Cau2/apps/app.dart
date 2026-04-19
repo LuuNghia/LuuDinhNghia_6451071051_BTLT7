@@ -9,11 +9,11 @@ class Cau2 extends StatelessWidget {
     return MaterialApp(
       title: 'Câu 2',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: true, 
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const ProductDetailScreen(productId: 1),
+      home: const ProductDetailScreen(),
     );
   }
 }
